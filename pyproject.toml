@@ -1,0 +1,32 @@
+[project]
+name = "jupiter-cli"
+version = "0.1.0"
+description = "Jupiter environment with Python and shell CLI support"
+requires-python = ">=3.12"
+dependencies = [
+    # Core Jupiter packages (REQUIRED for Jupiter notebooks)
+    "jupyter>=1.1.1",        # Jupiter core functionality
+    "jupyterlab>=4.3.0",    # Modern Jupiter interface
+    "ipykernel>=6.29.5",     # Python kernel for Jupiter
+    "notebook>=7.2.0",      # Classic Jupiter interface
+    "ipywidgets>=8.1.5",    # Interactive widgets for Jupiter
+    
+    # Data Science & Visualization (for data analysis notebooks)
+    "matplotlib>=3.9.0",     # Plotting and visualization
+    "pandas>=2.2.0",        # Data manipulation and analysis
+    "numpy>=2.0.0",         # Numerical computing
+    
+    # General Python utilities (for various notebook features)
+    "requests>=2.32.3",     # HTTP requests (for API calls, web scraping)
+    "python-dotenv>=1.0.1", # Environment variables (.env files)
+    "pyyaml>=6.0.1",        # YAML file parsing
+    "click>=8.2.1",         # CLI framework (for command-line tools)
+    "rich>=14.0.0",         # Rich text formatting and progress bars
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "ruff>=0.11.0",
+]
